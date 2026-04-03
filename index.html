@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Simulasi Dualisme Partikel-Gelombang</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header class="header">
+
+<h1>
+Simulasi Momentum dan Panjang Gelombang de Broglie
+</h1>
+
+<p>
+Visualisasi Interaktif Dualisme Partikel–Gelombang
+</p>
+
+</header>
+
+<main class="container">
+
+<section class="control-panel">
+
+<h2>Kontrol Parameter</h2>
+
+<div class="input-group">
+
+<label for="massSlider">
+Massa Partikel (m)
+</label>
+
+<!-- 🔥 DIUBAH TOTAL -->
+<input
+type="range"
+id="massSlider"
+min="1e-31"
+max="1e-26"
+step="1e-31"
+value="1e-30"
+>
+
+<input
+type="number"
+id="massInput"
+step="1e-31"
+value="1e-30"
+>
+
+<p>
+Massa :
+<span id="massValue">1e-30</span> kg
+</p>
+
+</div>
+
+<div class="input-group">
+
+<label for="velocitySlider">
+Kecepatan Partikel (v)
+</label>
+
+<input
+type="range"
+id="velocitySlider"
+min="1"
+max="100"
+step="1"
+value="10"
+>
+
+<p>
+Kecepatan :
+<span id="velocityValue">10</span> m/s
+</p>
+
+</div>
+
+<div class="input-group">
+
+<label for="particleSelect">
+Jenis Partikel
+</label>
+
+<select id="particleSelect">
+
+<option value="custom">Custom</option>
+<option value="electron">Elektron</option>
+<option value="proton">Proton</option>
+<option value="neutron">Neutron</option>
+
+</select>
+
+</div>
+
+<div class="buttons">
+
+<button id="playBtn">
+Play
+</button>
+
+<button id="pauseBtn">
+Pause
+</button>
+
+<button id="resetBtn">
+Reset
+</button>
+
+<button id="compareBtn">
+Mode Eksperimen
+</button>
+
+</div>
+
+<div class="result-panel">
+
+<h3>Hasil Perhitungan</h3>
+
+<p>
+Momentum (p) :
+<span id="momentumValue">-</span>
+kg·m/s
+</p>
+
+<p>
+Panjang Gelombang (λ) :
+<span id="lambdaValue">-</span>
+m
+</p>
+
+</div>
+
+</section>
+
+<section class="visualization">
+
+<h2>Visualisasi Gelombang</h2>
+
+<div class="canvas-container">
+
+<canvas id="waveCanvas"></canvas>
+
+</div>
+
+<p class="visual-note">
+Gelombang menunjukkan representasi visual dari panjang gelombang de Broglie.
+</p>
+
+</section>
+
+<section class="graph-panel">
+
+<h2>Grafik Hubungan λ dan Momentum</h2>
+
+<div class="chart-container">
+
+<canvas id="lambdaChart"></canvas>
+
+</div>
+
+<p class="graph-note">
+Grafik menunjukkan hubungan λ = h/p.
+</p>
+
+</section>
+
+</main>
+
+<footer class="footer">
+
+<p>
+Simulasi Media Pembelajaran Fisika Kuantum
+</p>
+
+<p>
+Topik : Dualisme Partikel–Gelombang (de Broglie)
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
